@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+       
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+      
+        float x = sc.nextFloat();
+        float y = sc.nextFloat();
+
+       
+        System.out.println((a + b) + " " + (a - b));
+
+        
+        System.out.printf("%.1f %.1f\n", (x + y), (x - y));
+
+        sc.close();
+    }
+}
