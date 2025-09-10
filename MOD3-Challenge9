@@ -1,0 +1,27 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        int result = 0;
+        int positiveB = Math.abs(b);
+
+        for (int i = 0; i < positiveB; i++) {
+            result += a;   
+        }
+        if (b < 0) {
+            result = -result;
+        }
+
+        System.out.println(result);
+    }
+}
