@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+
+        public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int dividend = sc.nextInt();
+        int divisor = sc.nextInt();
+
+        int quotient = 0;
+        int sign = 1;
+
+        if (dividend < 0) {
+            sign = -sign;
+            dividend = -dividend;
+        }
+        if (divisor < 0) {
+            sign = -sign;
+            divisor = -divisor;
+        }
+
+        while (dividend >= divisor) {
+            dividend -= divisor;
+            quotient++;
+        }
+
+        quotient = quotient * sign;
+
+        System.out.println(quotient);
+    }
+}
