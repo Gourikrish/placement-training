@@ -1,0 +1,19 @@
+class Solution {
+    public int findMaxK(int[] nums) {
+        HashSet<Integer> set = new HashSet<>();
+        for(int i=0;i<nums.length;i++){
+            set.add(nums[i]);
+        }
+        int max=-1; 
+        for(int i=0; i<nums.length; i++){
+            int x=nums[i];
+             if ( x>0 && set.contains(-x)) {
+                if( x>max ) max=x;
+        }
+         }
+        
+        return max;
+
+        
+    }
+}
