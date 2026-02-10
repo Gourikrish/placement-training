@@ -1,0 +1,20 @@
+// User function Template for Java
+class Solution {
+    public static boolean isSorted(ArrayList<Integer> list) {
+        // code here
+        int n=list.size();
+        if (n==0 || n == 1) return true;
+        boolean found1 =true;
+        boolean found2 =true;
+        for (int i=0;i<n-1; i++){
+            if(list.get(i) > list.get(i+1)){
+                found1=false;
+            }
+            if(list.get(i) < list.get(i+1)){
+                found2=false;
+            }
+        }
+        return found1 || found2 ;
+        
+    }
+}
