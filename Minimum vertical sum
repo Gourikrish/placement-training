@@ -1,0 +1,30 @@
+import java.util.*;
+
+class Solution {
+    public int minimumVerticalSum(ArrayList<ArrayList<Integer>> arr) {
+        
+        int maxCols = 0;
+        
+        // Find maximum number of columns
+        for (ArrayList<Integer> row : arr) {
+            maxCols = Math.max(maxCols, row.size());
+        }
+        
+        int minSum = Integer.MAX_VALUE;
+        
+        // Calculate vertical sums
+        for (int col = 0; col < maxCols; col++) {
+            int sum = 0;
+            
+            for (ArrayList<Integer> row : arr) {
+                if (col < row.size()) {
+                    sum += row.get(col);
+                }
+            }
+            
+            minSum = Math.min(minSum, sum);
+        }
+        
+        return minSum;
+    }
+}
